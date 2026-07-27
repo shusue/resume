@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Hye Soo You — Strategy, Market Intelligence, and Global Growth portfolio." />
+  <meta property="og:title" content="Hye Soo You | Strategy & Market Intelligence" />
+  <meta property="og:description" content="Selected work in market entry, commercialization, competitive intelligence, and cross-border project management." />
+  <meta property="og:type" content="website" />
+  <title>Hye Soo You | Strategy & Market Intelligence</title>
+
+  <style>
+    :root {
+      --navy: #082f49;
+      --navy-2: #0c4a6e;
+      --blue: #0369a1;
+      --cyan: #0891b2;
+      --ice: #f0f9ff;
+      --ice-2: #e8f6fb;
+      --ink: #0f172a;
+      --muted: #64748b;
+      --line: #dbeafe;
+      --white: #ffffff;
+      --shadow: 0 18px 50px rgba(8, 47, 73, .10);
+      --radius: 22px;
+      --container: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        "Noto Sans JP",
+        "Yu Gothic",
+        "Hiragino Kaku Gothic ProN",
+        Meiryo,
+        Arial,
+        sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.65;
+      text-rendering: optimizeLegibility;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    .container {
+      width: min(calc(100% - 40px), var(--container));
+      margin-inline: auto;
+    }
+
+    .section {
+      padding: 110px 0;
+      scroll-margin-top: 84px;
+    }
+
+    .section.alt {
+      background: linear-gradient(180deg, #f7fcfe 0%, var(--ice) 100%);
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 48px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--cyan);
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 32px;
+      height: 2px;
+      background: currentColor;
+      border-radius: 99px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.15;
+      letter-spacing: -.035em;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 7vw, 6.4rem);
+      max-width: 980px;
+      color: #fff;
+    }
+
+    h2 {
+      font-size: clamp(2.2rem, 4.5vw, 4rem);
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 1.08rem;
+      max-width: 760px;
+    }
+
+    .nav {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 100;
+      background: rgba(255, 255, 255, .90);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(219, 234, 254, .75);
+    }
+
+    .nav-inner {
+      height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 900;
+      color: var(--navy);
+      letter-spacing: -.02em;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background:
+        linear-gradient(135deg, var(--navy), var(--cyan));
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-size: .95rem;
+      box-shadow: 0 8px 20px rgba(8, 145, 178, .22);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      font-size: .92rem;
+      font-weight: 700;
+      color: #38556a;
+    }
+
+    .nav-links a {
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 100%;
+      height: 2px;
+      background: var(--cyan);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform .25s ease;
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .menu-btn {
+      display: none;
+      border: 0;
+      background: transparent;
+      color: var(--navy);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: end;
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 75% 25%, rgba(14, 165, 233, .30), transparent 33%),
+        radial-gradient(circle at 28% 30%, rgba(34, 211, 238, .16), transparent 30%),
+        linear-gradient(120deg, #06283f 0%, #0b4e70 52%, #0c7890 100%);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      opacity: .28;
+      background-image:
+        linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: linear-gradient(to bottom, black, transparent 88%);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 560px;
+      height: 560px;
+      right: -130px;
+      top: 110px;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 80px rgba(255,255,255,.03),
+        0 0 0 160px rgba(255,255,255,.02);
+      z-index: -1;
+    }
+
+    .hero-content {
+      padding: 150px 0 100px;
+    }
+
+    .hero .eyebrow {
+      color: #9ee9f5;
+    }
+
+    .hero-sub {
+      max-width: 760px;
+      margin-top: 26px;
+      color: rgba(255,255,255,.84);
+      font-size: clamp(1.08rem, 2vw, 1.35rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 50px;
+      padding: 0 20px;
+      border-radius: 999px;
+      font-weight: 800;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: #fff;
+      color: var(--navy);
+      box-shadow: 0 12px 28px rgba(0,0,0,.16);
+    }
+
+    .btn-outline {
+      color: #fff;
+      border: 1px solid rgba(255,255,255,.45);
+      background: rgba(255,255,255,.05);
+    }
+
+    .hero-meta {
+      margin-top: 42px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px 36px;
+      color: rgba(255,255,255,.72);
+      font-size: .92rem;
+    }
+
+    .hero-meta strong {
+      display: block;
+      color: #fff;
+      font-size: 1.05rem;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 44px;
+    }
+
+    .stat {
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .stat .num {
+      display: block;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      font-weight: 900;
+      color: var(--navy);
+      letter-spacing: -.06em;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .stat span:last-child {
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 34px;
+      align-items: stretch;
+    }
+
+    .profile-card,
+    .info-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .profile-card {
+      padding: 40px;
+    }
+
+    .profile-card p + p {
+      margin-top: 18px;
+    }
+
+    .info-card {
+      padding: 30px;
+      background: linear-gradient(145deg, var(--navy), var(--navy-2));
+      color: #fff;
+    }
+
+    .info-list {
+      display: grid;
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .info-row {
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255,255,255,.14);
+    }
+
+    .info-row:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .info-row small {
+      display: block;
+      color: rgba(255,255,255,.62);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .timeline {
+      position: relative;
+      margin-top: 12px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 120px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--line);
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 95px 1fr;
+      gap: 48px;
+      position: relative;
+      padding-bottom: 44px;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-year {
+      font-weight: 900;
+      color: var(--cyan);
+      font-size: 1rem;
+      padding-top: 4px;
+    }
+
+    .timeline-content {
+      position: relative;
+      padding: 28px 30px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .timeline-content::before {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--cyan);
+      border: 4px solid var(--ice);
+      left: -37px;
+      top: 32px;
+    }
+
+    .timeline-content .role {
+      color: var(--blue);
+      font-weight: 800;
+      margin: 6px 0 10px;
+    }
+
+    .timeline-content p {
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .card-body {
+      padding: 28px;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .project-top {
+      padding: 28px;
+      background:
+        linear-gradient(135deg, rgba(8,47,73,.95), rgba(8,145,178,.82));
+      color: #fff;
+      min-height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-self: flex-start;
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      background: rgba(255,255,255,.14);
+      border: 1px solid rgba(255,255,255,.20);
+    }
+
+    .project-top h3 {
+      font-size: 1.45rem;
+      margin-top: 28px;
+    }
+
+    .project-body {
+      display: grid;
+      gap: 16px;
+      padding: 28px;
+      flex: 1;
+    }
+
+    .project-row small {
+      display: block;
+      color: var(--cyan);
+      font-size: .72rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      margin-bottom: 4px;
+    }
+
+    .project-row p {
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    .strength-card {
+      padding: 30px;
+      position: relative;
+      min-height: 260px;
+    }
+
+    .strength-no {
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: #dff4f8;
+      line-height: 1;
+      position: absolute;
+      right: 22px;
+      top: 18px;
+    }
+
+    .strength-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: var(--ice);
+      color: var(--blue);
+      font-weight: 900;
+      margin-bottom: 24px;
+    }
+
+    .strength-card p {
+      color: var(--muted);
+      margin-top: 12px;
+    }
+
+    .process {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+      counter-reset: step;
+    }
+
+    .process-step {
+      position: relative;
+      padding: 28px 22px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .process-step::before {
+      counter-increment: step;
+      content: "0" counter(step);
+      display: block;
+      color: var(--cyan);
+      font-weight: 900;
+      margin-bottom: 18px;
+      letter-spacing: .06em;
+    }
+
+    .process-step p {
+      color: var(--muted);
+      font-size: .92rem;
+      margin-top: 10px;
+    }
+
+    .skills-wrap {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .skill-card {
+      padding: 28px;
+      border-radius: 18px;
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .skill-card h3 {
+      margin-bottom: 16px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .chip {
+      padding: 8px 11px;
+      background: var(--ice);
+      color: var(--navy-2);
+      border: 1px solid #d4edf6;
+      border-radius: 999px;
+      font-size: .82rem;
+      font-weight: 700;
+    }
+
+    .coverage {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .coverage-card {
+      padding: 34px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .coverage-list {
+      margin-top: 22px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .coverage-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #edf4f8;
+    }
+
+    .coverage-item:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .coverage-item span:last-child {
+      color: var(--muted);
+      font-size: .86rem;
+    }
+
+    .contact {
+      color: #fff;
+      text-align: center;
+      background:
+        radial-gradient(circle at 15% 0%, rgba(34,211,238,.20), transparent 28%),
+        linear-gradient(110deg, #042c4e, #0289a0);
+    }
+
+    .contact .section-head {
+      margin-inline: auto;
+    }
+
+    .contact .eyebrow {
+      color: #baf3fb;
+    }
+
+    .contact h2 {
+      max-width: 860px;
+      margin-inline: auto;
+    }
+
+    .contact .lead {
+      color: rgba(255,255,255,.76);
+      margin-inline: auto;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .footer {
+      background: #031e2f;
+      color: rgba(255,255,255,.72);
+      padding: 26px 0;
+      font-size: .88rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .footer strong {
+      color: #fff;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 960px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stats,
+      .skills-wrap {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .profile-grid,
+      .coverage {
+        grid-template-columns: 1fr;
+      }
+
+      .process {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .process-step:last-child {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        padding: 82px 0;
+      }
+
+      .nav-inner {
+        height: 66px;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 66px;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 10px 20px 18px;
+        background: rgba(255,255,255,.98);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        width: 100%;
+        padding: 13px 0;
+      }
+
+      .hero {
+        min-height: 92vh;
+      }
+
+      .hero-content {
+        padding: 130px 0 76px;
+      }
+
+      .grid,
+      .stats,
+      .skills-wrap,
+      .process {
+        grid-template-columns: 1fr;
+      }
+
+      .process-step:last-child {
+        grid-column: auto;
+      }
+
+      .timeline::before {
+        left: 9px;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding-left: 34px;
+      }
+
+      .timeline-content::before {
+        left: -33px;
+        top: 28px;
+      }
+
+      .profile-card,
+      .info-card {
+        padding: 28px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        width: min(calc(100% - 28px), var(--container));
+      }
+
+      .section {
+        padding: 68px 0;
+      }
+
+      .hero-actions,
+      .contact-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .stats {
+        gap: 14px;
+      }
+
+      .stat,
+      .card-body,
+      .project-body,
+      .project-top,
+      .strength-card,
+      .skill-card,
+      .coverage-card {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="nav" aria-label="Primary navigation">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="brand-mark">HS</span>
+        <span>Hye Soo You</span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">☰</button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="container hero-content">
+      <div class="eyebrow">Strategy · Market Intelligence · Global Growth</div>
+      <h1>Turning market intelligence into actionable growth strategy.</h1>
+      <p class="hero-sub">
+        Strategy consultant with experience in market entry, commercialization,
+        competitive intelligence, and cross-border project management across Asia,
+        North America, and Europe.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects">View Selected Projects</a>
+        <a class="btn btn-outline" href="#contact">Discuss an Opportunity</a>
+      </div>
+
+      <div class="hero-meta">
+        <div><strong>Seoul, South Korea</strong>Open to Japan & Singapore</div>
+        <div><strong>10+ Projects</strong>Healthcare, industrial, consumer</div>
+        <div><strong>Korean · English · Japanese</strong>Cross-border collaboration</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Profile</div>
+          <h2>Structured thinking, evidence-based strategy, disciplined execution.</h2>
+          <p class="lead">
+            I work at the intersection of market research, business strategy, and project delivery.
+            My focus is converting fragmented market evidence into clear priorities, entry options,
+            and executable recommendations.
+          </p>
+        </div>
+
+        <div class="profile-grid">
+          <article class="profile-card reveal">
+            <p>
+              Currently serving as Deputy Team Lead and Project Manager at DETA A.I. Consulting Korea,
+              I lead market-entry, commercialization, and growth-strategy engagements across healthcare,
+              industrial technology, sustainability, and advanced manufacturing.
+            </p>
+            <p>
+              Previously, I worked at IDC Korea as an Associate Market Analyst, covering market sizing,
+              forecasting, vendor tracking, and regional market consolidation across Asia-Pacific.
+            </p>
+            <p>
+              My working style combines structured problem definition, quantitative and qualitative
+              research, cross-functional coordination, and concise executive communication.
+            </p>
+          </article>
+
+          <aside class="info-card reveal">
+            <h3>Professional Snapshot</h3>
+            <div class="info-list">
+              <div class="info-row">
+                <small>Current Role</small>
+                Deputy Team Lead / Project Manager
+              </div>
+              <div class="info-row">
+                <small>Core Focus</small>
+                Market Entry, GTM, Commercialization, Market Intelligence
+              </div>
+              <div class="info-row">
+                <small>Target Roles</small>
+                Strategy, Business Planning, Market Intelligence, Global Business
+              </div>
+              <div class="info-row">
+                <small>Education</small>
+                B.S. in Data Science, Indiana University Indianapolis
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <div class="stats">
+          <div class="stat reveal">
+            <span class="num">10+</span>
+            <span>Strategy and market intelligence projects delivered</span>
+          </div>
+          <div class="stat reveal">
+            <span class="num">6+</span>
+            <span>Major geographic markets covered</span>
+          </div>
+          <div class="stat reveal">
+            <span class="num">3</span>
+            <span>Concurrent projects managed at peak</span>
+          </div>
+          <div class="stat reveal">
+            <span class="num">100%</span>
+            <span>On-time delivery across managed engagements</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Experience</div>
+          <h2>Career progression across consulting, market research, and project coordination.</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-year">2025–Present</div>
+            <div class="timeline-content">
+              <h3>DETA A.I. Consulting Korea</h3>
+              <div class="role">Deputy Team Lead / Project Manager</div>
+              <p>
+                Lead market-entry and commercialization projects, coordinate analysts,
+                manage client communication, and oversee multi-workstream delivery across
+                healthcare, industrial technology, and sustainability sectors.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-year">2022–2023</div>
+            <div class="timeline-content">
+              <h3>IDC Korea</h3>
+              <div class="role">Associate Market Analyst</div>
+              <p>
+                Conducted market sizing, forecasting, vendor shipment tracking, and APAC market
+                consolidation for printers, scanners, consumables, and industrial printing segments.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-year">2021</div>
+            <div class="timeline-content">
+              <h3>Korea Testing & Research Institute</h3>
+              <div class="role">Project Coordinator</div>
+              <p>
+                Supported project administration, stakeholder coordination, documentation,
+                and schedule management in a technical and institutional environment.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-year">2024</div>
+            <div class="timeline-content">
+              <h3>Indiana University Indianapolis</h3>
+              <div class="role">B.S. in Data Science</div>
+              <p>
+                Completed interdisciplinary coursework in analytics, statistics, programming,
+                and business problem solving. Senior project applied machine learning to the
+                World Happiness Report dataset.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Selected Projects</div>
+          <h2>Representative engagements across global growth, technology, and market intelligence.</h2>
+          <p class="lead">
+            Client names and sensitive commercial details are generalized. The focus is on
+            strategic question, scope, contribution, and outcome.
+          </p>
+        </div>
+
+        <div class="grid">
+          <article class="card project-card reveal">
+            <div class="project-top">
+              <span class="tag">Healthcare</span>
+              <h3>Organoid & 3D Cell Culture Global Market Entry Strategy</h3>
+            </div>
+            <div class="project-body">
+              <div class="project-row">
+                <small>Markets</small>
+                <p>Korea · Japan · United States</p>
+              </div>
+              <div class="project-row">
+                <small>Role</small>
+                <p>Project Manager / Market Strategy</p>
+              </div>
+              <div class="project-row">
+                <small>Scope</small>
+                <p>Market sizing, competitive landscape, customer segmentation, entry prioritization</p>
+              </div>
+              <div class="project-row">
+                <small>Outcome</small>
+                <p>Delivered three country reports and supported a follow-on engagement</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-card reveal">
+            <div class="project-top">
+              <span class="tag">Pharma Equipment</span>
+              <h3>Global Expansion Strategy for Deblistering Equipment</h3>
+            </div>
+            <div class="project-body">
+              <div class="project-row">
+                <small>Markets</small>
+                <p>United States · United Kingdom · Germany</p>
+              </div>
+              <div class="project-row">
+                <small>Role</small>
+                <p>Market Entry and Targeting Lead</p>
+              </div>
+              <div class="project-row">
+                <small>Scope</small>
+                <p>Customer mapping, CDMO and repackager targeting, demand drivers, partner landscape</p>
+              </div>
+              <div class="project-row">
+                <small>Outcome</small>
+                <p>Defined priority customer groups and market-entry pathways</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-card reveal">
+            <div class="project-top">
+              <span class="tag">AgriTech</span>
+              <h3>North America Smart Farm Feasibility & Growth Strategy</h3>
+            </div>
+            <div class="project-body">
+              <div class="project-row">
+                <small>Market</small>
+                <p>United States Northeast</p>
+              </div>
+              <div class="project-row">
+                <small>Role</small>
+                <p>Strategy Consultant</p>
+              </div>
+              <div class="project-row">
+                <small>Scope</small>
+                <p>Market feasibility, customer use cases, competitor benchmarking, growth options</p>
+              </div>
+              <div class="project-row">
+                <small>Outcome</small>
+                <p>Built a structured opportunity assessment for market prioritization</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-card reveal">
+            <div class="project-top">
+              <span class="tag">Consumer Tech</span>
+              <h3>Wellness Wearables Global Go-to-Market Strategy</h3>
+            </div>
+            <div class="project-body">
+              <div class="project-row">
+                <small>Markets</small>
+                <p>Japan · United States · Southeast Asia · Europe</p>
+              </div>
+              <div class="project-row">
+                <small>Role</small>
+                <p>Market Research and GTM Strategy</p>
+              </div>
+              <div class="project-row">
+                <small>Scope</small>
+                <p>Category trends, consumer demand, competitive positioning, route-to-market</p>
+              </div>
+              <div class="project-row">
+                <small>Outcome</small>
+                <p>Supported geographic and channel prioritization</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-card reveal">
+            <div class="project-top">
+              <span class="tag">Industrial Tech</span>
+              <h3>Southeast Asia Industrial HVAC Market Entry Assessment</h3>
+            </div>
+            <div class="project-body">
+              <div class="project-row">
+                <small>Markets</small>
+                <p>Thailand · Vietnam</p>
+              </div>
+              <div class="project-row">
+                <small>Role</small>
+                <p>Market Intelligence Lead</p>
+              </div>
+              <div class="project-row">
+                <small>Scope</small>
+                <p>Demand analysis, customer segments, regulatory context, competitor landscape</p>
+              </div>
+              <div class="project-row">
+                <small>Outcome</small>
+                <p>Established comparative market attractiveness and entry considerations</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-card reveal">
+            <div class="project-top">
+              <span class="tag">Market Intelligence</span>
+              <h3>APAC Printing Market Sizing & Forecasting</h3>
+            </div>
+            <div class="project-body">
+              <div class="project-row">
+                <small>Coverage</small>
+                <p>Korea and multi-country APAC consolidation</p>
+              </div>
+              <div class="project-row">
+                <small>Role</small>
+                <p>Associate Market Analyst</p>
+              </div>
+              <div class="project-row">
+                <small>Scope</small>
+                <p>Shipment tracking, market sizing, forecasting, vendor analysis</p>
+              </div>
+              <div class="project-row">
+                <small>Outcome</small>
+                <p>Produced recurring market intelligence outputs for regional decision-making</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="capabilities">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Core Capabilities</div>
+          <h2>Capabilities grounded in actual delivery experience.</h2>
+        </div>
+
+        <div class="grid">
+          <article class="card strength-card reveal">
+            <span class="strength-no">01</span>
+            <div class="strength-icon">MI</div>
+            <h3>Market Intelligence</h3>
+            <p>
+              Market sizing, forecasting, competitive analysis, customer segmentation,
+              vendor tracking, and evidence synthesis.
+            </p>
+          </article>
+
+          <article class="card strength-card reveal">
+            <span class="strength-no">02</span>
+            <div class="strength-icon">GS</div>
+            <h3>Growth Strategy</h3>
+            <p>
+              Market entry, GTM, commercialization strategy, opportunity prioritization,
+              and partner ecosystem assessment.
+            </p>
+          </article>
+
+          <article class="card strength-card reveal">
+            <span class="strength-no">03</span>
+            <div class="strength-icon">PM</div>
+            <h3>Project Management</h3>
+            <p>
+              Multi-project scheduling, analyst coordination, client communication,
+              issue resolution, and deadline ownership.
+            </p>
+          </article>
+
+          <article class="card strength-card reveal">
+            <span class="strength-no">04</span>
+            <div class="strength-icon">AI</div>
+            <h3>Data & AI-enabled Research</h3>
+            <p>
+              Excel, SQL, Python, Tableau, and AI tools used to improve research speed,
+              quality control, and reporting workflows.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Working Approach</div>
+          <h2>A practical five-step approach from ambiguity to decision.</h2>
+        </div>
+
+        <div class="process">
+          <article class="process-step reveal">
+            <h3>Define</h3>
+            <p>Clarify the business question, decision context, and evaluation criteria.</p>
+          </article>
+          <article class="process-step reveal">
+            <h3>Research</h3>
+            <p>Build an evidence base from market, competitor, customer, and regulatory sources.</p>
+          </article>
+          <article class="process-step reveal">
+            <h3>Analyze</h3>
+            <p>Size opportunities, test assumptions, and identify strategic implications.</p>
+          </article>
+          <article class="process-step reveal">
+            <h3>Prioritize</h3>
+            <p>Compare markets, segments, and strategic options against clear criteria.</p>
+          </article>
+          <article class="process-step reveal">
+            <h3>Recommend</h3>
+            <p>Translate findings into concise, executable actions and decision points.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Skills & Coverage</div>
+          <h2>Functional, analytical, and geographic breadth.</h2>
+        </div>
+
+        <div class="skills-wrap">
+          <article class="skill-card reveal">
+            <h3>Strategy</h3>
+            <div class="chips">
+              <span class="chip">Market Entry</span>
+              <span class="chip">Commercialization</span>
+              <span class="chip">GTM Strategy</span>
+              <span class="chip">Opportunity Sizing</span>
+              <span class="chip">Business Planning</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <h3>Analytics</h3>
+            <div class="chips">
+              <span class="chip">Excel</span>
+              <span class="chip">SQL</span>
+              <span class="chip">Python</span>
+              <span class="chip">Tableau</span>
+              <span class="chip">Forecasting</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <h3>AI Tools</h3>
+            <div class="chips">
+              <span class="chip">ChatGPT</span>
+              <span class="chip">Claude</span>
+              <span class="chip">Gemini</span>
+              <span class="chip">Perplexity</span>
+              <span class="chip">NotebookLM</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <h3>Languages</h3>
+            <div class="chips">
+              <span class="chip">Korean — Native</span>
+              <span class="chip">English — Professional</span>
+              <span class="chip">Japanese — Basic</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="coverage" style="margin-top: 24px;">
+          <article class="coverage-card reveal">
+            <h3>Industry Coverage</h3>
+            <div class="coverage-list">
+              <div class="coverage-item"><span>Healthcare & Life Sciences</span><span>Strategy / Research</span></div>
+              <div class="coverage-item"><span>Industrial Technology</span><span>Market Entry</span></div>
+              <div class="coverage-item"><span>Advanced Manufacturing</span><span>Competitive Analysis</span></div>
+              <div class="coverage-item"><span>Consumer & Wellness</span><span>GTM</span></div>
+              <div class="coverage-item"><span>Sustainability & Energy</span><span>Growth Strategy</span></div>
+            </div>
+          </article>
+
+          <article class="coverage-card reveal">
+            <h3>Geographic Coverage</h3>
+            <div class="coverage-list">
+              <div class="coverage-item"><span>Korea</span><span>Primary Market</span></div>
+              <div class="coverage-item"><span>Japan</span><span>Market Entry / Career Target</span></div>
+              <div class="coverage-item"><span>Southeast Asia</span><span>Regional Research</span></div>
+              <div class="coverage-item"><span>United States</span><span>Market Strategy</span></div>
+              <div class="coverage-item"><span>Europe</span><span>Commercialization Analysis</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Contact</div>
+          <h2>Open to strategy, market intelligence, and global business opportunities.</h2>
+          <p class="lead">
+            Particularly interested in roles where structured research, cross-border market insight,
+            and project execution directly support business decisions.
+          </p>
+        </div>
+
+        <div class="contact-actions reveal">
+          <a class="btn btn-primary" href="mailto:sue.hsyou88@gmail.com">Email Me</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div><strong>Hye Soo You</strong> · Strategy & Market Intelligence</div>
+      <div>© 2026. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+      const open = navLinks.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded", open);
+      menuBtn.textContent = open ? "✕" : "☰";
+    });
+
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuBtn.setAttribute("aria-expanded", "false");
+        menuBtn.textContent = "☰";
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
